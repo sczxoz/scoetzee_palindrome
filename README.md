@@ -28,7 +28,7 @@ $ gem install scoetzee_palindrome
 
 ```
 $ irb
->> require 'scoetzee_palindrome_palindrome'
+>> require 'scoetzee_palindrome'
 >> "honey badger".palindrome?
 => false
 >> "deified".palindrome?
