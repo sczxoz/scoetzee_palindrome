@@ -1,7 +1,6 @@
 require "scoetzee_palindrome/version"
 
-class String
-
+module ScoetzeePalindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
@@ -11,6 +10,14 @@ class String
 
     # Returns content for palindrome testing.
     def processed_content
-      self.split(/\W/).join.downcase
+      self.to_s.split(/\W/).join.downcase
     end
-end  
+end
+
+class String
+  include ScoetzeePalindrome
+end 
+
+class Integer
+  include ScoetzeePalindrome
+end
